@@ -3,11 +3,7 @@ Desktop system developed to assist commercial stores that tend to keep a registe
 
 System built using NetBeans. 
 
-
 ------
-For the reports to work properly add the JasReport files. 
+- For the reports to work properly add the JasReport files. 
+- For the system to save to input data, add the database and its columns  that is located in the code
 
--
-For the system to save to input data, add the database and its columns  that is located in the code
-
--
