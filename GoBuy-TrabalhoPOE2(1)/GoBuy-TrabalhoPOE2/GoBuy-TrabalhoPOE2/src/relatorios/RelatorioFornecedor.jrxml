@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="abc68a38-5a7b-490b-9071-c3d9b55806fc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     fornecedor.`nome_fornecedor` AS fornecedor_nome_fornecedor,
+     fornecedor.`cnpj` AS fornecedor_cnpj,
+     fornecedor.`telefone` AS fornecedor_telefone,
+     fornecedor.`cidade` AS fornecedor_cidade,
+     fornecedor.`endereco` AS fornecedor_endereco,
+     fornecedor.`grupo_comprador` AS fornecedor_grupo_comprador
+FROM
+     `fornecedor` fornecedor]]>
+	</queryString>
+	<field name="fornecedor_nome_fornecedor" class="java.lang.String"/>
+	<field name="fornecedor_cnpj" class="java.lang.String"/>
+	<field name="fornecedor_telefone" class="java.lang.String"/>
+	<field name="fornecedor_cidade" class="java.lang.String"/>
+	<field name="fornecedor_endereco" class="java.lang.String"/>
+	<field name="fornecedor_grupo_comprador" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="67" uuid="3d815f0f-4faf-4726-95e4-a0955b0cd5f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Relatório Fornecedor]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="h.mm a">
+				<reportElement x="455" y="15" width="100" height="20" uuid="42af5738-a4f9-45a7-82e6-8a4c39079a6b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="26" width="106" height="20" uuid="5c45ae87-b9d6-4b2d-aa06-547de9cbb3ec"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="26" width="69" height="20" uuid="54c5352a-d29f-4441-8b84-cac7cb74cf16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CNPJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="26" width="90" height="20" uuid="edead4d7-aa95-4f35-acb4-a54f82d0bc5e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="26" width="90" height="20" uuid="a2b0008f-db14-4130-b05e-635b68cdf2bd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="26" width="100" height="20" uuid="ca5b32e1-8b01-4b15-a356-9fac77c6a456"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="26" width="100" height="20" uuid="a8199236-b336-4827-80e0-70e10d7d8495"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grupo comprador]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="21" width="106" height="20" uuid="4faddc97-1eff-4a9a-8d49-fe9b6696ca2f"/>
+				<textFieldExpression><![CDATA[$F{fornecedor_nome_fornecedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="21" width="69" height="20" uuid="96118f9a-bd78-4c0a-a6ca-a39f8e65e4ed"/>
+				<textFieldExpression><![CDATA[$F{fornecedor_cnpj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="175" y="21" width="90" height="20" uuid="9589a3b7-39b5-4b6b-9735-600a500fcae0"/>
+				<textFieldExpression><![CDATA[$F{fornecedor_telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="21" width="90" height="20" uuid="dc2c6528-8661-4665-b280-d2d96e09ab30"/>
+				<textFieldExpression><![CDATA[$F{fornecedor_cidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="21" width="100" height="20" uuid="af4b043f-1d88-4820-8ada-0fa5e1097743"/>
+				<textFieldExpression><![CDATA[$F{fornecedor_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="21" width="100" height="20" uuid="4ae4192c-0026-4589-b66c-6be8fc88e4b7"/>
+				<textFieldExpression><![CDATA[$F{fornecedor_grupo_comprador}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="34" width="100" height="20" uuid="97ad9cb1-a01f-4841-9dcf-5dc0e414eea0"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
