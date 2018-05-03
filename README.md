@@ -6,6 +6,8 @@ System built using NetBeans.
 
 ------
 For the reports to work properly add the JasReport files. 
-------
-for the system to save to input data, add the database and its columns  that is located in the code
-------
+
+-
+For the system to save to input data, add the database and its columns  that is located in the code
+
+-
